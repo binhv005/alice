@@ -10,7 +10,7 @@ export const Positioning = () => {
   ];
 
   return (
-    <section className="pt-14 md:pt-16 pb-6 md:pb-8 bg-brand-cream overflow-hidden" id="who-we-are">
+    <section className="pt-14 md:pt-16 pb-6 md:pb-8 bg-brand-cream overflow-hidden" id="who-we-are" data-nav-theme="light">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left: Tag, headline, gold accent */}

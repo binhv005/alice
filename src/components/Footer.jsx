@@ -19,7 +19,7 @@ export const Footer = () => {
 
   return (
     <>
-      <footer className="relative bg-brand-navyDeep text-white border-t border-brand-gold/20 py-16 md:py-20 overflow-hidden w-full min-h-[340px]">
+      <footer className="relative bg-brand-navyDeep text-white border-t border-brand-gold/20 py-16 md:py-20 overflow-hidden w-full min-h-[calc(100svh-4.5rem)] flex flex-col justify-center">
         {/* Full-screen Width Transparent Background Graphic - Full 100vw Screen Width & 80% Opacity */}
         <div className="absolute inset-0 z-0 w-full h-full pointer-events-none flex items-end justify-center overflow-hidden">
           <img 

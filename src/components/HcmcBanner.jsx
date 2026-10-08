@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export const HcmcBanner = () => {
   return (
-    <section className="relative pt-20 md:pt-28 pb-40 md:pb-52 bg-brand-navyDeep overflow-hidden text-white">
+    <section data-nav-theme="dark" className="relative pt-20 md:pt-28 pb-40 md:pb-52 bg-brand-navyDeep overflow-hidden text-white">
       {/* Background: Clear on right, smoothly fading to Midnight Navy on left */}
       <motion.div 
         className="absolute inset-0 z-0"

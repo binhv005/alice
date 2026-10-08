@@ -36,7 +36,7 @@ export const Services = () => {
   ];
 
   return (
-    <section className="pt-8 md:pt-12 pb-8 md:pb-10 bg-white overflow-hidden" id="services">
+    <section className="pt-8 md:pt-12 pb-8 md:pb-10 bg-white overflow-hidden" id="services" data-nav-theme="light">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         {/* Section Header */}
         <motion.div

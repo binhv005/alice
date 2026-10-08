@@ -5,14 +5,26 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#home');
+  const [theme, setTheme] = useState('hero');
+
+  const isHero = theme === 'hero';
+  const isLight = theme === 'light';
+  const navBg = isHero
+    ? 'bg-transparent'
+    : isLight
+      ? 'bg-brand-cream/95 backdrop-blur-md shadow-md'
+      : 'bg-brand-navyDark/95 backdrop-blur-md shadow-md';
+  const linkColor = isLight ? 'text-brand-navyDark hover:text-brand-gold' : 'text-gray-200 hover:text-brand-gold';
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 40);
+
+      // Theme follows the section currently sitting under the navbar (data-nav-theme: hero | dark | light)
+      const under = document.elementsFromPoint(window.innerWidth / 2, 60)
+        .map((el) => el.closest('[data-nav-theme]'))
+        .find((el) => el && !el.closest('nav'));
+      setTheme(under ? under.dataset.navTheme : 'dark');
 
       // Track active section during scroll
       // 'clients' ends where its element ends; later banners/CTA belong to no nav item
@@ -29,6 +41,7 @@ export const Navbar = () => {
       setActiveSection(current === 'cta-box' ? '' : `#${current}`);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -57,10 +70,8 @@ export const Navbar = () => {
   return (
     <>
     <nav
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 px-6 md:px-12 lg:px-20 bg-brand-navyDark shadow-md ${
-        isScrolled 
-          ? 'py-1.5 sm:py-2 bg-brand-navyDark/98 backdrop-blur-md' 
-          : 'py-2 sm:py-2.5 md:py-3'
+      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 px-6 md:px-12 lg:px-20 ${navBg} ${
+        isScrolled ? 'py-1.5 sm:py-2' : 'py-2 sm:py-2.5 md:py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -86,7 +97,7 @@ export const Navbar = () => {
                 href={link.href} 
                 onClick={() => handleLinkClick(link.href)}
                 className={`nav-link pb-1 transition duration-200 ${
-                  isActive ? 'active text-brand-gold' : 'text-gray-200 hover:text-brand-gold'
+                  isActive ? 'active text-brand-gold' : linkColor
                 }`}
               >
                 {link.label}
@@ -108,7 +119,7 @@ export const Navbar = () => {
 
           <button 
             onClick={() => setMobileMenuOpen(true)}
-            className="lg:hidden text-white p-2 focus:outline-none hover:text-brand-gold transition duration-200"
+            className={`lg:hidden ${isLight ? 'text-brand-navyDark' : 'text-white'} p-2 focus:outline-none hover:text-brand-gold transition duration-200`}
             aria-label="Open mobile menu"
           >
             <Menu className="w-6 h-6" />

@@ -40,7 +40,7 @@ function App() {
         <Convergence />
         <Clients />
         <HcmcBanner />
-        <div className="relative bg-brand-navyDark overflow-hidden">
+        <div data-nav-theme="dark" className="relative bg-brand-navyDark overflow-hidden">
           {/* Shared background image layer for BridgeBanner + CtaBox */}
           <div
             aria-hidden="true"

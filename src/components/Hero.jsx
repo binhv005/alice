@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <header className="relative min-h-[95vh] flex items-center pt-32 pb-24 bg-brand-navyDeep overflow-hidden" id="home">
+    <header className="relative min-h-[95vh] flex items-center pt-32 pb-24 bg-brand-navyDeep overflow-hidden" id="home" data-nav-theme="hero">
       {/* Hero Background Panorama: Clear on right, smoothly fading to Midnight Navy on left */}
       <motion.div
         className="absolute inset-0 z-0"

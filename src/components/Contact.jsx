@@ -59,7 +59,7 @@ export const Contact = () => {
   };
 
   return (
-    <section className="pt-16 md:pt-20 pb-16 md:pb-20 bg-brand-cream border-t border-brand-creamDarker overflow-hidden" id="contact">
+    <section className="pt-16 md:pt-20 pb-16 md:pb-20 bg-brand-cream border-t border-brand-creamDarker overflow-hidden" id="contact" data-nav-theme="light">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           {/* Left: Contact Details Column */}

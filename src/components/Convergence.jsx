@@ -14,7 +14,7 @@ export const Convergence = () => {
   ];
 
   return (
-    <section className="pt-16 md:pt-20 pb-4 md:pb-6 bg-brand-cream overflow-hidden" id="synergy">
+    <section className="pt-16 md:pt-20 pb-4 md:pb-6 bg-brand-cream overflow-hidden" id="synergy" data-nav-theme="light">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         {/* Section Title */}
         <motion.div

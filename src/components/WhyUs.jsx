@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export const WhyUs = () => {
   return (
-    <section className="py-24 bg-brand-navyDark text-white relative overflow-hidden" id="why-us">
+    <section className="py-24 bg-brand-navyDark text-white relative overflow-hidden" id="why-us" data-nav-theme="dark">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
