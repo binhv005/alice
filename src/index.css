@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #2D3748;
+    background-color: #FBF9F5;
+    -webkit-font-smoothing: antialiased;
+    text-wrap: pretty;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  p, li, span, a, label {
+    text-wrap: pretty;
+  }
+}
+
+.font-luxury-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Subtle luxury link hover and active state */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #C5A880;
+  transition: width 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+.nav-link:hover {
+  color: #C5A880 !important;
+}
+.nav-link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+.nav-link.active {
+  color: #C5A880 !important;
+}
+.nav-link.active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Converging flow animations */
+@keyframes pulse-flow {
+  0% { stroke-dashoffset: 20; }
+  100% { stroke-dashoffset: 0; }
+}
+
+.flow-line {
+  stroke-dasharray: 6 4;
+  animation: pulse-flow 2s linear infinite;
+}
