@@ -9,8 +9,10 @@ export const Footer = () => {
 
   const navLinks = [
     { label: 'Home', href: '#home' },
+    { label: 'Who We Are', href: '#who-we-are' },
     { label: 'Services', href: '#services' },
     { label: 'Why Us', href: '#why-us' },
+    { label: 'Synergy', href: '#synergy' },
     { label: 'Clients', href: '#clients' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -30,9 +32,9 @@ export const Footer = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 w-full">
           {/* Upper Footer Row */}
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between pb-4 gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-between pb-4 gap-8">
             {/* Brand Info */}
-            <div>
+            <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <a href="#home" onClick={scrollToTop} className="flex items-center mb-3 group inline-flex" aria-label="ALICE & CO. Home">
                 <img 
                   src="/LoGoDuAn.webp" 
@@ -47,7 +49,7 @@ export const Footer = () => {
             </div>
 
             {/* Quick Navigation Links */}
-            <div className="flex flex-wrap items-center gap-6 text-[10px] tracking-luxury uppercase text-gray-300 font-sans">
+            <div className="hidden md:flex flex-wrap items-center gap-x-5 gap-y-3 md:-translate-y-8 text-[10px] tracking-luxury uppercase text-gray-300 font-sans">
               {navLinks.map((link) => (
                 <a 
                   key={link.label}
@@ -60,7 +62,7 @@ export const Footer = () => {
             </div>
 
             {/* Contact Quick Links & Socials */}
-            <div className="flex flex-col md:items-end space-y-2 text-xs text-gray-400">
+            <div className="flex flex-col items-center md:items-end space-y-2 text-xs text-gray-400">
               <div className="flex items-center space-x-2">
                 <Phone className="w-3 h-3 text-brand-gold" />
                 <a href="tel:+84334095326" className="hover:text-white transition duration-200 font-mono">
@@ -98,7 +100,7 @@ export const Footer = () => {
 
       {/* Standalone Sub-Footer Bar - Matching Footer Navy Background */}
       <div className="w-full bg-brand-navyDeep border-t border-white/10 py-4 px-6 md:px-12 lg:px-20 text-gray-400 relative z-20">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-[11px] sm:text-xs font-light tracking-wide">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-center sm:text-left text-[11px] sm:text-xs font-light tracking-wide">
           <div>
             &copy; 2026 ALICE &amp; CO. All rights reserved.
           </div>

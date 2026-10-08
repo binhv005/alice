@@ -11,6 +11,7 @@ import BridgeBanner from './components/BridgeBanner';
 import CtaBox from './components/CtaBox';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import BackToTop from './components/BackToTop';
 
 function App() {
   // Always scroll to the top of the page on refresh/reload
@@ -54,6 +55,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }
