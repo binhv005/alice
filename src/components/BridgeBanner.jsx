@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export const BridgeBanner = () => {
   return (
-    <section className="pt-12 md:pt-14 pb-8 md:pb-10 bg-brand-navyDark text-white text-center overflow-hidden">
+    <section className="pt-12 md:pt-14 pb-8 md:pb-10 text-white text-center overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 text-xs tracking-wider">
         {/* International Side */}
         <motion.div 

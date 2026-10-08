@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 export const CtaBox = () => {
   return (
-    <section className="bg-brand-navyDark pt-0 pb-14 md:pb-16 px-6 overflow-hidden" id="cta-box">
-      <motion.div 
+    <section className="pt-0 pb-14 md:pb-16 px-6 overflow-hidden" id="cta-box">
+      <motion.div
         className="max-w-5xl mx-auto border border-brand-gold/50 p-8 md:p-12 bg-brand-navyCard/60 backdrop-blur-sm flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl"
         initial={{ opacity: 0, y: 35, scale: 0.98 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}

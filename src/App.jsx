@@ -39,8 +39,18 @@ function App() {
         <Convergence />
         <Clients />
         <HcmcBanner />
-        <BridgeBanner />
-        <CtaBox />
+        <div className="relative bg-brand-navyDark overflow-hidden">
+          {/* Shared background image layer for BridgeBanner + CtaBox */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-0 bg-cover bg-center opacity-[0.14] pointer-events-none"
+            style={{ backgroundImage: "url('/bcaacd7cbc1436fd2a75c1161b52546c.jpg')" }}
+          />
+          <div className="relative z-10">
+            <BridgeBanner />
+            <CtaBox />
+          </div>
+        </div>
         <Contact />
       </main>
       <Footer />

@@ -25,7 +25,7 @@ export const Clients = () => {
   ];
 
   return (
-    <section className="pt-16 md:pt-24 pb-20 md:pb-24 bg-white overflow-hidden" id="clients">
+    <section className="pt-16 md:pt-24 pb-16 md:pb-24 bg-white overflow-hidden" id="clients">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
